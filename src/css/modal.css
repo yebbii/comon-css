@@ -1,0 +1,128 @@
+/* modal창 외부화면 */
+.Modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* modal창 */
+.modalBody {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  padding: 60px 40px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.7);
+}
+
+#modalCloseBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  color: rgba(0, 0, 0, 0.7);
+  background-color: transparent;
+  font-size: 20px;
+
+}
+
+#modalCloseBtn:hover {
+  cursor: pointer;
+}
+
+.container {
+  min-width: 150px;
+  box-shadow: 0 4px 5px 0 #00000026;
+  position: relative;
+  z-index: 10;
+}
+
+#dropdown {
+  left: 0;
+  visibility: hidden;
+  position: absolute;
+}
+
+.dropdownLabel {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding: 12px;
+  font-size: 14px;
+  border: 3px solid black;
+}
+
+.dropdownLabel:hover {
+  cursor: pointer;
+}
+
+.content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0 4px 5px 0 #00000026;
+}
+
+#dropdown:checked+label+div.content {
+  display: block;
+  border-top: 1px solid #00000026;
+}
+
+.caretIcon {
+  transition: transform 250ms ease-out;
+}
+
+#dropdown:checked+label>.caretIcon {
+  transform: rotate(-180deg);
+}
+
+.content ul {
+  list-style-type: none;
+  padding: 12px;
+  margin: 0;
+}
+
+.content ul li {
+  margin: 5px 0;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  padding: 10px;
+  transition: all .1s ease;
+  cursor: pointer;
+}
+
+.content ul li:hover {
+  background-color: lightgray;
+}
+
+.dropdown .modalButton {
+  background-color: black;
+  border-radius: 50px;
+  border: 3px solid black;
+  margin-top: 65px;
+  width: 80px;
+  height: 35px;
+  line-height: 29px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  font-family: 'TheJamsil5Bold';
+  cursor: pointer;
+  transition: all .1s ease;
+}
+
+.dropdown .modalButton:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+}

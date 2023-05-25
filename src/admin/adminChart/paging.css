@@ -1,0 +1,63 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul.pagination li {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+ul.pagination li:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+ul.pagination li:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+ul.pagination li a {
+  text-decoration: none;
+  color: #296be6;
+  font-size: 15px;
+  font-family: 'TheJamsil5Bold';
+}
+
+ul.pagination li.active a {
+  color: #71c4fc;
+}
+
+ul.pagination li a:hover,
+ul.pagination li a.active {
+  color: #0d4bbe;
+}
+
+.page-selection {
+  width: 30px;
+  height: 30px;
+  color: #0d4bbe;
+}
+
+/* 아이콘 */
+.single-Icon {
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+.double-Icon {
+  font-size: 18px;
+  vertical-align: middle;
+}

@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+.Stars svg {
+    color: #878787;
+    cursor: pointer;
+    padding: 2px;
+}
+
+.Stars:hover svg {
+    color: #fcc419;
+}
+
+.Stars svg:hover~svg {
+    color: #878787;
+}
+
+.Stars .Pick {
+    color: #fcc419;
+}

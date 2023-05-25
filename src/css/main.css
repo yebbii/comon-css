@@ -1,0 +1,279 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* 윈도우 css 수정  */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+
+::-webkit-scrollbar-track {
+    background-color: gray;
+}
+
+/* 배경 */
+.main-back {
+    height: 37.5vh;
+    background-color: lightgray;
+}
+
+.main-1 {
+    height: 75vh;
+    position: relative;
+}
+
+.main-2 {
+    width: 78%;
+    height: 80vh;
+    margin-top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 추천 앱 슬라이더 */
+.recommend-slider {
+    font-family: 'TheJamsil5Bold';
+    width: 80%;
+    height: 520px;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 슬라이더 내부 박스 */
+#slider-box {
+    border: 5px solid black;
+    background-color: black;
+    height: 500px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.recommend-slider .slick-list {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+}
+
+.slider-content {
+    width: 30%;
+    float: left;
+    background-color: black;
+    color: white;
+    height: 500px;
+    padding: 80px 60px;
+}
+
+.slider-header {
+    width: 100%;
+    height: 70%;
+    border-bottom: 3px solid white;
+}
+
+.slider-content img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: white;
+    object-fit: cover;
+}
+
+/* 썸네일 이미지 */
+.slider-thumbnail {
+    width: 70%;
+    height: 496px;
+    overflow: hidden;
+}
+
+.slider-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-imageName {
+    font-size: 25px;
+    margin-top: 20px;
+    line-height: 30px;
+    word-break: break-all;
+    text-align: left;
+}
+
+.slider-detail {
+    text-align: left;
+    line-height: 20px;
+    word-break: break-all;
+    height: 30%;
+    padding-top: 15px;
+}
+
+/* 메인 랭킹 */
+.today-rank {
+    font-family: 'TheJamsil5Bold';
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 120px;
+    padding-bottom: 25px;
+    border-bottom: 5px solid black;
+}
+
+.thumbs-icon {
+    vertical-align: middle;
+    margin: 0px 20px;
+    font-size: 30px;
+    color: rgb(255, 196, 0);
+}
+
+.rank {
+    display: inline-block;
+    width: 100%;
+    padding: 0px 30px;
+}
+
+.rank-each {
+    width: calc(100%/3 - 60px);
+    margin: 0px 30px;
+    height: 400px;
+    overflow: hidden;
+    border: 3px solid black;
+    float: left;
+    position: relative;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
+    background-color: #666;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.rank-detail {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 101%;
+    height: 400px;
+    line-height: 400px;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+.rank-each:hover .rank-detail {
+    display: block;
+}
+
+.rank-detailBtn {
+    width: 100px;
+    height: 50px;
+    border-radius: 50px;
+    border: 5px solid lightgray;
+    background-color: white;
+    font-family: 'TheJamsil5Bold';
+    transition: all .1s ease;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.rank-detailBtn:hover {
+    border: 5px solid white;
+    background-color: rgb(228, 253, 238);
+    box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.5);
+}
+
+.rank-each img {
+    width: 100%;
+    height: 345px;
+    object-fit: cover;
+}
+
+.rank-box {
+    text-align: center;
+}
+
+/* 랭크 헤더 */
+.rank-header {
+    background-color: #A7A7A7;
+    width: 100%;
+    height: 50px;
+    padding: 0px 20px;
+    border-bottom: 3px solid black;
+    position: relative;
+}
+
+#clearfix {
+    width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rank-header-round-left,
+.rank-header-round-right {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.rank-header-round-left {
+    float: left;
+}
+
+.rank-header-round-right {
+    float: right;
+}
+
+/*랭크 바디 */
+.rank-image-description {
+    background-color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    padding: 22px 30px;
+    border-top: 3px solid black;
+    font-family: 'TheJamsil5Bold';
+    text-align: left;
+}
+
+.rank-imagename {
+    font-size: 30px;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.rank-devname {
+    font-size: 18px;
+    margin: 10px 0px 20px 0px;
+    color: rgb(3, 117, 98);
+}
+
+.rank-description {
+    line-height: 18px;
+}
+
+/* 클리어 */
+#slider-box::after,
+.slider-content::after,
+#clearfix::after,
+.rank::after {
+    display: block;
+    content: "";
+    clear: both;
+}

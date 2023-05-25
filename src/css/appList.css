@@ -1,0 +1,396 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+/* 알럿 글씨 */
+@font-face {
+    font-family: 'GyeonggiTitleM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiTitleM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 라디오 버튼 */
+.order-radio {
+    text-align: right;
+    margin: 50px 135px;
+    font-family: 'TheJamsil5Bold';
+    font-size: 1em;
+    vertical-align: middle;
+}
+
+.radioInput {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+[type="radio"] {
+    vertical-align: middle;
+    appearance: none;
+    border: 3px solid black;
+    border-radius: 50%;
+    width: 1.8em;
+    height: 1.8em;
+    transition: border 0.3s ease-in-out;
+    margin: 5px;
+    cursor: pointer;
+}
+
+[type="radio"]:checked {
+    border: 7px solid black;
+}
+
+/* 앱 리스트 썸네일 */
+.applist-thumbnail {
+    background-image: url('../img/applist.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 320px;
+    border-bottom: 5px solid black;
+}
+
+.applist-header {
+    text-align: center;
+    height: 350px;
+    position: relative;
+}
+
+/* 헤더 요소 */
+.ani-logo {
+    width: 300px;
+    height: 200px;
+    float: left;
+    margin: 70px 0px 0px 450px;
+    position: relative;
+    background-size: 155px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../img/ani-logo_3.png');
+}
+
+.ani-logo-move {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    animation-name: aniLogo;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes aniLogo {
+    0%,
+    45% {
+        background-size: 150px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../img/ani-logo_1.png');
+    }
+
+    55%,
+    100% {
+
+        background-size: 150px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../img/ani-logo_2.png');
+    }
+}
+
+
+/* 타이틀 애니메이션 */
+.applist-header-container {
+    position: relative;
+    height: 315px;
+}
+
+
+.applist-title-box4 p {
+    font-family: 'TheJamsil5Bold';
+    font-size: 2em;
+    text-shadow: 4px 4px 1px navy;
+    animation: blink-effect 1s 1s step-end 3;
+}
+
+@keyframes blink-effect {
+    50% {
+        opacity: 0;
+    }
+}
+
+.applist-title-box4 span {
+    font-family: 'TheJamsil5Bold';
+    font-size: 2.2em;
+}
+
+.applist-title-box1,
+.applist-title-box2,
+.applist-title-box3,
+.applist-title-box4 {
+    width: 800px;
+    height: 130px;
+    line-height: 124px;
+    color: white;
+    text-align: center;
+    background-color: #ff97f4;
+    border: 3px solid navy;
+    position: absolute;
+}
+
+.applist-title-box1 {
+    top: 40%;
+    left: 40%;
+    animation-name: box1;
+    animation-duration: 1s;
+}
+
+.applist-title-box2 {
+    top: 37%;
+    left: 39%;
+    animation-name: box2;
+    animation-duration: 0.8s;
+}
+
+.applist-title-box3 {
+    top: 34%;
+    left: 38%;
+    animation-name: box3;
+    animation-duration: 0.8s;
+}
+
+.applist-title-box4 {
+    top: 31%;
+    left: 37%;
+    animation-name: box4;
+    animation-duration: 0.8s;
+}
+
+@keyframes box1 {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes box2 {
+
+    0%,
+    35% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes box3 {
+
+    0%,
+    65% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes box4 {
+
+    0%,
+    95% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 카테고리 버튼 */
+.applist-header .categoryActive,
+.applist-header .categoryUnActive {
+    width: 150px;
+    height: 50px;
+    line-height: 40px;
+    font-size: 20px;
+    background-color: white;
+    margin: 0px 20px;
+    border-radius: 50px;
+    border: 5px solid black;
+    font-family: 'TheJamsil5Bold';
+    cursor: pointer;
+}
+
+.applist-header .categoryActive {
+    background-color: black;
+    color: white;
+}
+
+.applist-header .categoryButton {
+    position: absolute;
+    left: 50%;
+    bottom: 2%;
+    transform: translate(-50%, -2%);
+}
+
+/* 앱 리스트 */
+.applist {
+    width: 1590px;
+    height: 100%;
+    overflow: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.applist-each {
+    width: 450px;
+    height: 420px;
+    border: 4px solid black;
+    float: left;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 150px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.applist-image-box {
+    width: 100%;
+    height: 295px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.applist-each-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.applist-description {
+    height: 120px;
+    background-color: white;
+    border-top: 1px solid lightgray;
+    font-family: 'TheJamsil5Bold';
+    position: relative;
+}
+
+#applist-description-box {
+    width: 100%;
+    padding: 5px 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.applist-each-icon {
+    width: 60px;
+    height: 60px;
+    float: left;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px rgb(0, 0, 0, 0.5);
+    background-color: white;
+}
+
+.applist-description-text {
+    text-align: left;
+    float: left;
+    height: 60px;
+    width: 210px;
+    padding: 5px 10px 5px 15px;
+}
+
+.applist-description-name {
+    font-size: 25px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.applist-description-detail {
+    color: gray;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.star {
+    float: right;
+    color: #FFC700;
+}
+
+.star-logo {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* 알럿 */
+.swal2-popup {
+    display: none;
+    position: relative;
+    box-sizing: border-box;
+    grid-template-columns: minmax(0, 100%);
+    width: 25em;
+    max-width: 100%;
+    padding: 0 0 1.25em;
+    border: solid 3px black;
+    background: #fff;
+    color: black;
+    font-family: 'GyeonggiTitleM';
+    font-size: 1.2rem;
+}
+
+/* swal 알럿창 확인 버튼 */
+.swal2-styled.swal2-confirm,
+.swal2-styled.swal2-cancel {
+    width: 7em;
+    border: none;
+    border-radius: none;
+    background: initial;
+    background-color: black;
+    color: #fff;
+    font-family: 'GyeonggiTitleM';
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.swal2-styled.swal2-cancel {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+
+.swal2-icon.swal2-warning {
+    border-color: gray;
+    color: black;
+}
+
+/* 클리어 */
+#applist-description-box::after,
+.applist-each-icon::after,
+.applist-description-name ::after {
+    display: block;
+    content: "";
+    clear: both;
+}

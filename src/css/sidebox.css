@@ -1,0 +1,62 @@
+.side-box {
+	position: fixed;
+	bottom: 120px;
+	right: 30px;
+}
+
+.side-chat {
+	position: relative;
+	cursor: pointer;
+	box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+	background-color: #FEE500;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	margin-bottom: 10px;
+}
+
+.chat-img {
+	position: absolute;
+	top: 52%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 26px;
+	height: 26px;
+}
+
+.topBtn {
+	background-image: url("./totop.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-position-y: 15px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: none;
+	background-color: gray;
+	color: #fff;
+	box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	z-index: 99999;
+}
+
+.weathericon {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	color: white;
+	background-color: #609AF0;
+	border-radius: 100%;
+	border: none;
+	box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+	z-index: 99999;
+	margin-bottom: 10px;
+	cursor: default;
+}
+
+.weathericon svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}

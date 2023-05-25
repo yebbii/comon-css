@@ -1,0 +1,366 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* 얇은 고딕 */
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+#adminChart-container {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.adminChart-box {
+    display: inline-block;
+    width: 83%;
+    height: 93.6vh;
+    padding: 80px 180px;
+    overflow-y: scroll;
+    font-family: 'TheJamsil5Bold';
+    background-color: #d3eafd;
+}
+
+.adminChart-box .body_title {
+    font-weight: bold;
+    font-size: 26px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid black;
+}
+
+.adminChart-box .body_subtitle {
+    margin: 20px 0px 60px 0px;
+    color: gray;
+}
+
+/* 전체 통계 카운트 */
+.total-Container {
+    height: 170px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-between
+}
+
+/* 사용자 수 카운트 box */
+.totalUser-Box,
+.totalDownloadCount-Box,
+.totalOpenApp-Box {
+    height: 100%;
+    width: 28%;
+    padding: 20px;
+    border: 1px solid rgb(242, 251, 255);
+    border-radius: 20px;
+    /* background: #ebf5ff; */
+    box-shadow: -3px -3px 8px 7px rgba(255, 255, 255, 0.8), 3px 3px 8px 8px rgba(24, 70, 151, 0.3);
+}
+
+/* 카운터 타이틀 */
+.totalUser-P,
+.totalDownloadCount-P,
+.totalOpenApp-P {
+    font-size: 1em;
+    color: gray;
+    margin-bottom: 15px;
+}
+
+/* 전체 통계 data box */
+.total-Data,
+.totalUser-Data p,
+.totalOpenApp-Data p,
+.totalDownloadCount-Data p {
+    display: inline-block;
+
+}
+
+
+/* 전체 통계 data - spac 애니메이션 숫자 */
+#total-Data span {
+    /* width: 80%; */
+    /* color: #0D4BBE; */
+    font-size: 6em;
+    background: linear-gradient(-40deg, #0D4BBE, #8eb6ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* 전체 앱 다운로드 수 */
+.chartBox1 {
+    margin: 100px 0px;
+    height: 470px;
+    width: 100%;
+    text-align: center;
+    padding: 20px 30px;
+    border: 1px solid rgb(242, 251, 255);
+    border-radius: 20px;
+    box-shadow: -3px -3px 8px 7px rgba(255, 255, 255, 0.8), 3px 3px 8px 8px rgba(24, 70, 151, 0.3);
+}
+
+/* .chart-container {
+    border: 3px solid black;
+    height: 400px;
+    width: 100%;
+} */
+/* 하이차트 */
+.chartBox1 .highcharts-point {
+    color: linear-gradient(to right, #56ccf2, #2f80ed) !important;
+}
+
+.highcharts-text-outline {
+    stroke: none !important;
+}
+
+.highcharts-subtitle {
+    margin-left: 50px !important;
+}
+
+.highcharts-background {
+    fill: none;
+}
+
+.highcharts-container {
+    height: 400px !important;
+}
+
+/*  타이틀 */
+.totalAppDownload-title,
+.monthlyCountChart-title {
+    display: inline-block;
+    font-size: 25px;
+    line-height: 50px;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+    /* background: linear-gradient(-40deg, #0D4BBE, #8eb6ff); */
+    background: linear-gradient(40deg, #c371ec, #2f80ed);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.totalAppDownloadChart-box {
+    box-shadow: inset -2px -2px 5px 6px rgba(255, 255, 255, 0.8), inset 2px 2px 5px 10px rgba(24, 70, 151, 0.3);
+    overflow: hidden;
+    width: 100%;
+    height: 360px;
+    padding: 15px 30px;
+    border-radius: 15px;
+}
+
+/* 사용자수 통계 + 앱 다운로드 랭킹 리스트 */
+.chartBox2 {
+    /* display: inline-block; */
+    height: 500px;
+    width: 100%;
+    vertical-align: middle;
+
+}
+
+/* 사용자 수 통계 */
+.pieChartBox {
+    float: left;
+    text-align: center;
+    padding: 20px;
+    height: 460px;
+    width: 50%;
+    border-radius: 20px;
+    box-shadow: -3px -3px 8px 7px rgba(255, 255, 255, 0.8), 3px 3px 8px 8px rgba(24, 70, 151, 0.3);
+}
+
+.pieChart-title {
+    font-size: 25px;
+    line-height: 50px;
+    margin-bottom: 10px;
+    background: linear-gradient(40deg, #c371ec, #2f80ed);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* 앱 다운로드 랭킹 리스트 */
+.AppRankBox {
+    display: inline-block;
+    height: 460px;
+    width: calc(50% - 80px);
+    margin-left: 80px;
+    padding: 20px 50px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 20px;
+    box-shadow: -3px -3px 8px 7px rgba(255, 255, 255, 0.8), 3px 3px 8px 8px rgba(24, 70, 151, 0.3);
+}
+
+.AppRankBoxTitle {
+    font-size: 25px;
+    height: 50px;
+    position: relative;
+    font-family: 'TheJamsil5Bold';
+    line-height: 50px;
+    background: linear-gradient(40deg, #c371ec, #2f80ed);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.AppRackContent {
+    margin-top: 20px;
+    width: 100%;
+    display: inline-block;
+    overflow-y: scroll;
+    height: 320px;
+}
+
+/* 스크롤바css */
+.AppRackContent::-webkit-scrollbar {
+    width: 5px;
+}
+
+.AppRackContent::-webkit-scrollbar-thumb {
+    background-color: #0D4BBE;
+    border-radius: 5px;
+    transition: width 0.2s ease-in-out;
+}
+
+/* 앱 다운로드 랭킹 each box */
+.AppRankEach {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 95%;
+    margin-bottom: 10px;
+    padding: 18px 0px;
+    border-radius: 15px;
+    box-shadow: inset -2px -2px 5px 6px rgba(255, 255, 255, 0.8), inset 2px 2px 5px 10px rgba(24, 70, 151, 0.3);
+    cursor: pointer;
+}
+
+.AppRankEach:hover {
+    background-color: rgb(0, 0, 0, 0.3);
+    color: white;
+}
+
+.appRank-thumbnail {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 2px 2px 3px #a8a8a8;
+}
+
+.appRankEach-content-container {
+    display: inline-block;
+    vertical-align: middle;
+    height: 50px;
+    width: 300px;
+}
+
+.appRank-imageName {
+    float: left;
+    text-align: left;
+    line-height: 50px;
+    height: 100%;
+    width: 65%;
+    padding-right: 5px;
+    font-size: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.appRank-devName {
+    float: left;
+    height: 100%;
+    width: 20%;
+    text-align: left;
+    line-height: 50px;
+    color: #a8a8a8;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.appRank-downloadCount {
+    float: right;
+    height: 100%;
+    width: 15%;
+    line-height: 50px;
+    text-align: right;
+}
+
+.appRank-dowbloadData {
+    width: 80%;
+    color: #EB3223;
+    font-size: 20px;
+}
+
+.appRank-dowbloadData2 {
+    width: 20%;
+}
+
+/* 월별 앱 다운로드 통계 */
+.MonthlyCountBox {
+    box-shadow: inset -2px -2px 5px 6px rgba(255, 255, 255, 0.8), inset 2px 2px 5px 10px rgba(24, 70, 151, 0.3);
+    overflow: hidden;
+    width: 100%;
+    height: 360px;
+    padding: 15px 30px;
+    border-radius: 15px;
+}
+
+/* 클리어 */
+.appRankEach-content-container::after,
+.appRank-imageName::after,
+.appRank-devName::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+/* 차트 폰트 */
+#pieChart .highcharts-title,
+#monthlyCountChart .highcharts-title,
+#totalAppDownload .highcharts-title {
+    font-family: 'SUITE-Regular';
+    font-size: 18px;
+}
+
+#monthlyCountChart .highcharts-data-labels,
+#pieChart .highcharts-data-labels {
+    font-family: 'SUITE-Regular';
+    font-size: 18px;
+}
+
+#totalAppDownload .highcharts-subtitle,
+#totalAppDownload .highcharts-no-tooltip,
+#totalAppDownload .highcharts-caption,
+#totalAppDownload .highcharts-xaxis-labels,
+#totalAppDownload .highcharts-yaxis-labels {
+    font-family: 'SUITE-Regular';
+    font-size: 18px;
+    color: black;
+}
+
+#totalAppDownload .highcharts-subtitle {
+    padding-left: 20px !important;
+}
+
+#monthlyCountChart .highcharts-subtitle,
+#monthlyCountChart .highcharts-no-tooltip,
+#monthlyCountChart .highcharts-caption,
+#monthlyCountChart .highcharts-xaxis-labels,
+#monthlyCountChart .highcharts-yaxis-labels {
+    font-family: 'SUITE-Regular';
+    font-size: 18px;
+    color: black;
+}

@@ -1,0 +1,225 @@
+/* 폰트 */
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NanumSquareNeo-Variable';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.chartDetail-content {
+    width: 83%;
+    height: 93.6vh;
+    padding: 80px 180px;
+    overflow-y: scroll;
+}
+
+/* 스크롤 */
+.chartDetail-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.chartDetail-content::-webkit-scrollbar-thumb {
+    background-color: #83c7ff;
+    border-radius: 5px;
+}
+
+.chartDetail-content::-webkit-scrollbar-thumb:hover {
+    background-color: #0d4bbe;
+}
+
+
+/* 앱 이름 */
+.app-name {
+    font-family: 'TheJamsil5Bold';
+    font-weight: bold;
+    font-size: 40px;
+    vertical-align: middle;
+    padding: 0px 10px 15px;
+    border-bottom: 3px solid black;
+}
+
+/* 출시일, 개발자, 차트 및 총 다운로드 수 */
+.app-content-1 {
+    font-family: 'TheJamsil5Bold';
+    font-weight: bold;
+    font-size: 20px;
+    padding: 15px 0px;
+    text-align: right;
+}
+
+.app-content-2 {
+    margin-top: 40px;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: -3px -3px 8px 7px rgba(255, 255, 255, 0.8), 3px 3px 8px 8px rgba(24, 70, 151, 0.3);
+}
+
+.total-box {
+    font-family: 'NanumSquareNeo-Variable';
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px 15px;
+    color: #0d4bbe;
+    background-color: #F1F6F9;
+    border-radius: 10px;
+    float: right;
+}
+
+/* 아이콘 */
+.user-Icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.regist-Icon {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+.total-Icon {
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+}
+
+/* 상세 설명 */
+.appDetail-content {
+    font-size: 25px;
+    margin: 150px 0px;
+}
+
+.appDetail-title {
+    font-family: 'TheJamsil5Bold';
+    padding-bottom: 15px;
+    border-bottom: 3px solid black;
+}
+
+.description-Icon,
+.app-name-icon,
+.user-Icon-1,
+.regist-Icon {
+    vertical-align: middle;
+}
+
+.app-description {
+    font-family: 'NanumSquareNeo-Variable';
+    font-weight: bold;
+    font-size: 20px;
+    margin: 40px 0px;
+}
+
+.app-detail {
+    height: 250px;
+    padding: 20px 30px;
+    border-radius: 20px;
+    background-color: rgb(43, 120, 221);
+    box-shadow: -3px -3px 8px 7px rgba(221, 240, 255, 0.8), 3px 3px 8px 8px rgba(24, 70, 151, 0.3);
+}
+
+.app-detail-content {
+    font-family: 'NanumSquareNeo-Variable';
+    font-size: 18px;
+    color: white;
+    height: 210px;
+    line-height: 35px;
+    text-align: justify;
+    padding-right: 10px;
+    overflow-y: auto;
+}
+
+/* 스크롤 css */
+.app-detail-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.app-detail-content::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.app-detail-content::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+}
+
+/* 평가 및 리뷰 */
+.appReviews-content {
+    font-family: 'TheJamsil5Bold';
+    font-weight: bold;
+    font-size: 25px;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+    border-bottom: 3px solid black;
+}
+
+.app-userName {
+    font-family: 'NanumSquareNeo-Variable';
+    font-weight: bold;
+    font-size: 20px;
+    color: #0d4bbe;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    box-shadow: inset -1px -1px 5px 6px rgba(255, 255, 255, 0.8), inset 1px 1px 5px 10px rgba(24, 70, 151, 0.3);
+}
+
+.user-Icon-2 {
+    vertical-align: middle;
+}
+
+
+.app-reviews-box,
+.app-no-reviews-box {
+    font-family: 'NanumSquareNeo-Variable';
+    font-size: 17px;
+    line-height: 25px;
+    white-space: pre-wrap;
+    height: 200px;
+    padding: 20px 30px;
+    border-radius: 20px;
+    background-color: rgb(188, 216, 252);
+    box-shadow: -3px -3px 8px 7px rgba(221, 240, 255, 0.8), 3px 3px 8px 8px rgba(24, 70, 151, 0.3);
+}
+
+.app-review {
+    height: 95px;
+    text-align: justify;
+    padding-right: 15px;
+    overflow-y: auto;
+}
+
+/* 스크롤 css */
+.app-review::-webkit-scrollbar {
+    width: 5px;
+}
+
+.app-review::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.app-review::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+}
+
+.review-line {
+    padding: 30px 0px;
+}
+
+/* 클리어 */
+.app-content-2 ::after {
+    display: block;
+    content: "";
+    clear: both;
+}

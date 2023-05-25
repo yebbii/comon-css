@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+.highcharts-yaxis-grid,
+.highcharts-xaxis {
+    display: none;
+}
+
+.subtitle {
+    width: 340px;
+    margin: 0px;
+}
+
+.subtitle ul {
+    padding-left: 45px;
+    margin: 0px;
+}
+
+.subtitle ul li {
+    float: left;
+    list-style: none;
+    width: calc(280px/5);
+    text-align: center;
+    font-size: 11px;
+    color: black;
+    font-weight: bold;
+    font-family: 'SUITE-Regular';
+}
+
+.highcharts-yaxis-labels,
+.highcharts-no-tooltip {
+    display: none;
+}
+
+.highcharts-point {
+    width: 20px;
+}
+
+.highcharts-xaxis-labels {
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    font-family: 'SUITE-Regular';
+}
+
+.highcharts-background {
+    height: 110px !important;
+}
+
+/* 클리어 */
+.subtitle::after {
+    display: block;
+    content: '';
+    clear: both;
+}

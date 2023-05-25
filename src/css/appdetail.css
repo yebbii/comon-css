@@ -1,0 +1,631 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* 조금 두꺼운 다정한 고딕 */
+@font-face {
+    font-family: 'GongGothicMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 얇은고딕 */
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 제주고딕 */
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+
+.jejugothic * {
+    font-family: 'Jeju Gothic', sans-serif;
+}
+
+.detail-back {
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.detail-left {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.detail-thumbnail {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.detail-thumbnail .img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.6);
+    object-fit: cover;
+}
+
+.detail-container {
+    width: 75%;
+    height: 85%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'GongGothicMedium';
+}
+
+.detail-imagename {
+    height: 70%;
+    font-family: 'GongGothicMedium';
+    color: white;
+    font-size: 30px;
+    word-break: keep-all;
+}
+
+.detail-imagename-title {
+    font-family: 'GongGothicMedium';
+    font-size: 70px;
+    margin-right: 15px;
+    margin: 0px;
+}
+
+.tiltle2 {
+    font-size: 30px;
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+.detail-download {
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 100%;
+    height: 25%;
+    padding: 50px 30px;
+    border-radius: 20px;
+    /* 블러 효과 */
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+/* 아이콘 */
+#detail-icon-box {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+.detail-download-icon {
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 2px 2px rgb(126, 126, 126);
+    background-color: white;
+}
+
+/* 이름, 설명 */
+.datail-download-name {
+    width: calc(65% - 30px);
+    height: 100%;
+    padding: 10px 0px;
+    margin-right: 30px;
+    float: left;
+    color: white;
+}
+
+.detail-download-name-imagename {
+    font-size: 45px;
+    margin: 0px;
+    height: 60%;
+}
+
+.detail-download-name-imagedescription {
+    font-family: 'SUITE-Regular';
+    font-size: 18px;
+    line-height: 22px;
+    text-align: justify;
+    word-break: keep-all;
+}
+
+.detail-download-section {
+    width: 15%;
+    float: left;
+    color: white;
+    text-align: center;
+    font-family: 'Jeju Gothic', sans-serif;
+    padding-top: 30px;
+}
+
+.download-count {
+    font-size: 12px;
+}
+
+.download-button {
+    background-color: #005DCB;
+    border: none;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50px;
+    color: white;
+    font-family: 'Jeju Gothic', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* ----------------------------------------오른쪽 */
+.detail-right {
+    width: 50%;
+    height: 100vh;
+    padding: 100px 120px;
+    overflow-y: scroll;
+    font-family: 'GongGothicMedium';
+}
+
+/* 뒤로가기 버튼 */
+.detail-side-btn {
+    position: fixed;
+    right: 2%;
+    bottom: 15%;
+    width: 50px;
+}
+
+.detail-top-btn {
+    width: 50px;
+    height: 50px;
+}
+
+.detail-home-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #005DCB;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px black;
+    margin-bottom: 5px;
+}
+
+.detail-up-btn,
+.detail-down-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: gray;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px black;
+    margin-bottom: 5px;
+}
+
+.detail-right-content {
+    width: 100%;
+}
+
+.detail-screenshot {
+    height: 400px;
+}
+
+.detail-image-review {
+    height: 450px;
+    border-bottom: 3px solid black;
+
+}
+
+/* 스크린샷 슬라이더 */
+.screenshot-title,
+.how-to-use-title,
+.review-title {
+    border-bottom: 3px solid black;
+    padding-bottom: 15px;
+    margin: 0px;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.appdetail-slider-box {
+    position: relative;
+    height: 320px;
+}
+
+.appdetail-slider {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.appdetail-slider .slick-list {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    vertical-align: middle;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+.appdetail-slider .slick-next {
+    color: white !important;
+    width: 50px !important;
+    border-radius: 10px;
+    right: 20px;
+    transition: all .1s ease;
+}
+
+.appdetail-slider .slick-next:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.appdetail-slider-each {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.appdetail-slider-screenshot {
+    object-fit: cover !important;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* 앱 정보 박스 */
+.detail-image-description {
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    background-color: #D9D9D9;
+    height: 196px;
+    width: 100%;
+    padding: 30px 0px;
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+
+.detail-image-staravg,
+.detail-image-registdt,
+.detail-image-devinfo {
+    width: calc(100% /3);
+    height: 100%;
+    float: left;
+    text-align: center;
+    margin: auto;
+}
+
+.detail-image-description-inner {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    vertical-align: middle;
+}
+
+/* 평가 */
+.detail-title {
+    font-size: 1em;
+    margin: 0px;
+    height: 25px;
+    line-height: 25px;
+}
+
+.star-score,
+.dev-icon,
+.registdt {
+    font-size: 2em;
+    height: 80px;
+    line-height: 90px;
+}
+
+.stars,
+.dev-name,
+.regist-name {
+    height: 25px;
+    line-height: 25px;
+}
+
+/* 업로드 날짜 */
+.registdt {
+    font-size: 1.3em;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+}
+
+/* 개발자 */
+.dev-icon {
+    background-image: url('../img/dev-icon.png');
+    background-size: 80px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.detail-how-to-use {
+    height: auto;
+}
+
+/* 서비스 이용법 */
+.how-to-use-detail {
+    width: 100%;
+    text-align: justify;
+    line-height: 30px;
+    font-family: 'SUITE-Regular';
+    font-size: 20px;
+    font-weight: 500;
+    white-space: pre-line;
+    margin-bottom: 100px;
+}
+
+/* 리뷰 평가 정보 */
+.review-star-avg {
+    float: left;
+}
+
+.detail-image-review-slider,
+.review-star-avg,
+.review-star {
+    padding: 20px 0px;
+    position: relative;
+    text-align: center;
+    margin: auto;
+}
+
+#star-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.detail-image-review .review-box {
+    height: 30%;
+    padding: 0px;
+}
+
+.review-box-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    vertical-align: middle;
+}
+
+.review-star-avg,
+.review-star {
+    width: 20%;
+    height: 100%;
+}
+
+.review-star {
+    width: 30%;
+    margin: 0px;
+}
+
+.review-score-total {
+    width: 50%;
+    padding: 0px;
+    position: relative;
+    text-align: center;
+    margin: auto;
+}
+
+.review-star-avg-score {
+    font-size: 40px;
+    margin: 0px;
+}
+
+.review-star-avg-score-fix {
+    margin: 0px;
+    font-size: 15px;
+}
+
+.review-star-icon {
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    width: 100%;
+    padding: 15px 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.review-star-icon svg {
+    width: 1.7em;
+    height: 1.7em;
+    margin: 2px;
+}
+
+/* 리뷰 슬라이더 */
+.detail-image-review-slider {
+    position: relative;
+    height: 200px;
+    width: 100%;
+}
+
+.review-slider-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.review-slider-box .slick-list {
+    width: calc(100% - 40px);
+    text-align: center;
+    margin: 0px 20px;
+    height: 100%;
+    vertical-align: middle;
+    border: none;
+    border-radius: 10px;
+}
+
+.detail-image-review-slider .slick-dots {
+    display: none !important;
+}
+
+/* 슬라이더 넘기는 버튼 */
+.review-slider-box .slick-prev,
+.review-slider-box .slick-next {
+    width: 40px !important;
+    height: 40px !important;
+    padding: 5px;
+    border-radius: 10px;
+    transition: all .3s ease;
+}
+
+.review-slider-box .slick-prev:hover,
+.review-slider-box .slick-next:hover {
+    color: white !important;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* 슬라이더 각각 리뷰 기본값 */
+.review-slider-default {
+    border: 3px dotted #cfcfcf;
+    width: 100%;
+    height: 150px;
+    line-height: 150px;
+    border-radius: 10px;
+    font-family: 'SUITE-Regular';
+}
+
+.review-slider-default p {
+    margin: 0px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* 슬라이더 각각 리뷰  */
+.review-slider-each {
+    background-color: #cfcfcf;
+    width: 95% !important;
+    height: 100% !important;
+    border-radius: 10px;
+    padding: 15px;
+    font-family: 'SUITE-Regular';
+}
+
+#review-slider-each-header {
+    height: 40px;
+    line-height: 40px;
+}
+
+.review-slider-each-title {
+    width: 70%;
+    float: left;
+    text-align: left;
+    font-weight: 600;
+    font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.review-slider-each-star {
+    float: right;
+}
+
+.review-slider-each-content {
+    text-align: left;
+    height: 100px;
+    width: 100%;
+    padding-right: 5px;
+    clear: both;
+    font-weight: 300;
+    font-size: 15px;
+    text-align: justify;
+    /* 원하는 줄 수 입력 */
+    line-height: 20px;
+    overflow-y: auto;
+}
+
+/* 스크롤바css */
+.review-slider-each-content::-webkit-scrollbar {
+    width: 3px;
+}
+
+.review-slider-each-content::-webkit-scrollbar-thumb {
+    background-color: rgb(126, 126, 126);
+    border-radius: 5px;
+}
+
+.review-slider-each-content::-webkit-scrollbar-track {
+    background-color: rgb(240, 240, 240);
+
+}
+
+/* 오른쪽 마지막 다운로드 박스 */
+.detail-image-download-app {
+    background-color: rgb(228, 228, 228);
+    border-radius: 20px;
+    text-align: center;
+    padding: 50px 30px;
+    margin-top: 100px;
+    font-family: 'TheJamsil5Bold';
+}
+
+.detail-image-download-app-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 3px 3px 3px #a8a8a8;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+.detail-image-download-app-name {
+    color: #005DCB;
+    font-size: 35px;
+    margin: 0px;
+    margin-bottom: 10px;
+    word-break: keep-all;
+}
+
+.detail-image-download-app-description {
+    font-size: 18px;
+    font-family: 'SUITE-Regular';
+    margin: 0px;
+    margin-bottom: 40px;
+    word-break: keep-all;
+}
+
+.detail-image-download-button {
+    background-color: #005DCB;
+    border: 3px solid #005DCB;
+    width: 100px;
+    height: 30px;
+    line-height: 24px;
+    border-radius: 50px;
+    color: white;
+    font-family: 'Jeju Gothic', sans-serif;
+    font-size: 15px;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.detail-image-download-button:hover {
+    border: 3px solid #005DCB;
+    background-color: white;
+    color: black;
+    box-shadow: 0px 0px 5px 4px #92bdf3;
+}
+
+/* 클리어 */
+.detail-left::after,
+#detail-icon-box::after,
+.review-slider-each-title::after {
+    display: block;
+    clear: both;
+    content: '';
+}

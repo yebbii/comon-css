@@ -1,0 +1,899 @@
+/* 잠실 */
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* 얇은 고딕 */
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#my-container {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.select-login-bg {
+    width: 100%;
+    height: 937px;
+    background-image: url('../img/bg-login.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+.login-bg {
+    width: 100%;
+    height: 937px;
+    background-image: url('../img/bg-userlogin.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+.dev-login-bg {
+    width: 100%;
+    height: 937px;
+    background-image: url('../img/bg-devlogin.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+
+.login-container {
+    height: 93.6vh;
+    padding: 100px 400px;
+    position: relative;
+}
+
+.login-box {
+    width: 60%;
+    border: 3px solid black;
+    background-color: white;
+    text-align: center;
+    box-shadow: 3px 3px 5px 3px rgb(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 헤더 */
+.login-header {
+    padding: 15px 40px;
+    background-color: rgb(155, 155, 155);
+    border-bottom: 3px solid black;
+}
+
+.dev-login-header {
+    padding: 15px 40px;
+    background-color: #ffbb00;
+    border-bottom: 3px solid black;
+}
+
+.round1,
+.round2,
+.round3 {
+    width: 15px;
+    height: 15px;
+    float: right;
+    margin-right: 20px;
+    padding: 0px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+/* 바디 */
+.login-body {
+    width: 100%;
+    padding: 50px 120px 50px 100px;
+}
+
+/* 왼쪽 로고 */
+.rotate-box {
+    width: 50%;
+    height: 500px;
+    margin-right: 50px;
+    float: left;
+    position: relative;
+}
+
+.rotation-text {
+    width: 100%;
+    height: 500px;
+    background-image: url('../img/rotation-text.png');
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+    animation: rotate-text 10s ease-in-out infinite;
+    transform-origin: 50% 50%;
+    opacity: 0.7;
+}
+
+@keyframes rotate-text {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.login-logo {
+    background-size: 100%;
+    margin: auto;
+    width: 50%;
+    height: 500px;
+    animation-name: colorLogo;
+    animation-duration: 5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    z-index: 2;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes colorLogo {
+    0% {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../img/login-logo5.png');
+    }
+
+    25% {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../img/login-logo2.png');
+    }
+
+    50% {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../img/login-logo3.png');
+    }
+
+    75% {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../img/login-logo4.png');
+    }
+
+    100% {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('../img/login-logo5.png');
+    }
+
+}
+
+/* 로그인 */
+.login-content {
+    width: 40%;
+    height: 340px;
+    float: left;
+    padding: 0px 10px;
+    margin-top: 10px;
+}
+
+.dev-login-content {
+    width: 40%;
+    height: 340px;
+    float: left;
+    padding: 50px 10px;
+    margin-top: 10px;
+    vertical-align: middle;
+}
+
+.login-content-title {
+    font-family: 'TheJamsil5Bold';
+    font-size: 2em;
+    margin: 20px 0px 30px 0px;
+}
+
+.login-content-title p {
+    padding: 0px;
+    margin-bottom: 5px;
+}
+
+.login-content-title p:first-child {
+    font-size: 1.2em;
+}
+
+.login-content-title p:last-child {
+    font-size: 0.9em;
+    color: gray;
+}
+
+.login-content input,
+.dev-login-content input {
+    border: 3px solid black;
+    padding: 0px 40px 0px 10px;
+    width: 100%;
+    height: 45px;
+    line-height: 39px;
+    margin-bottom: 15px;
+    font-family: 'SUITE-Regular';
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.login-content input::placeholder,
+.dev-login-content input::placeholder {
+    font-size: 0.7em;
+}
+
+/* 패스워드 아이콘 */
+.login-pwd-input {
+    position: relative;
+}
+
+.login-pwd-show {
+    font-size: 1.5em;
+    position: absolute;
+    top: 20%;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* ------------------------------------------------------------- */
+/* 선택 로그인 */
+.select-login-content {
+    display: inline-block;
+    text-align: center;
+    margin: 60px auto 80px auto;
+    width: 80%;
+}
+
+.select-login-content .select-login-title {
+    font-family: 'TheJamsil5Bold';
+    font-size: 5em;
+    margin-bottom: 50px;
+    background: linear-gradient(40deg, rgb(255, 162, 162), rgb(118, 87, 255));
+    animation: huerotator 10s infinite alternate;
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+/* 선택 로그인 */
+.select-login-box {
+    display: inline-block;
+    width: 100%;
+}
+
+.select-dev-loginBtn,
+.select-user-loginBtn {
+    float: left;
+    width: calc(50% - 60px);
+    margin: 0px 30px;
+    padding: 40px 20px;
+    font-family: 'TheJamsil5Bold';
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.select-login-content div>p {
+    padding: 0px;
+    margin: 0px;
+    margin-top: 40px;
+    font-size: 1.2em;
+}
+
+.select-login-content span {
+    font-size: 1.5em;
+}
+
+.select-dev-loginBtn {
+    border: 5px solid #ffbb00;
+    color: #ffbb00;
+}
+
+.select-user-loginBtn {
+    border: 5px solid black;
+    color: black;
+}
+
+.select-dev-loginBtn:hover {
+    border: 5px solid #ffbb00;
+    background-color: #ffbb00;
+    color: white;
+    box-shadow: 0px 0px 10px rgb(255, 190, 0);
+}
+
+.select-user-loginBtn:hover {
+    border: 5px solid black;
+    background-color: black;
+    color: white;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+
+#dev-login-btn,
+#user-login-btn {
+    width: 100%;
+    height: 100px;
+}
+
+.select-go-register-btn {
+    height: 40px;
+    line-height: 40px;
+    margin: 50px 30px 0px 30px;
+    border-radius: 12px;
+    font-size: 1em;
+    font-family: 'GongGothicMedium';
+    background: linear-gradient(to right, #00c3ff, #ffff1c);
+    animation: huerotator 3s infinite alternate;
+    cursor: pointer;
+}
+
+.select-go-register-btn:hover {
+    background: pink;
+    box-shadow: 0px 0px 10px 2px yellow;
+}
+
+.select-go-register-icon {
+    margin-left: 10px;
+}
+
+.select-go-register-icon svg {
+    font-size: 0.8em;
+    vertical-align: middle;
+    margin-right: -6px;
+}
+
+/* 로그인 버튼 */
+.loginBtn {
+    width: 100%;
+    height: 40px;
+    font-family: 'TheJamsil5Bold';
+    font-size: 1em;
+    cursor: pointer;
+    border: 3px solid black;
+    background-color: black;
+    color: white;
+}
+
+.loginBtn:disabled {
+    border: 3px solid black;
+    background-color: lightgray;
+    color: black;
+    cursor: none;
+}
+
+/* 회원가입 버튼 */
+.register-btn {
+    border: none;
+    background-color: transparent;
+    float: right;
+    padding-bottom: 3px;
+    margin: 15px 0px;
+    border-bottom: 1px solid black;
+    font-family: 'SUITE-Regular';
+    font-weight: bold;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+/* 소셜로그인 */
+.social-login-box {
+    width: 40%;
+    height: 160px;
+    float: left;
+    border-top: 3px solid black;
+    padding-top: 10px;
+}
+
+.social-login-box p {
+    font-family: 'TheJamsil5Bold';
+    font-size: 1.1em;
+    padding: 10px 0px 20px 0px;
+}
+
+/* 로그인 버튼 박스 */
+.login-btn-box {
+    display: inline-block;
+}
+
+/* 네이버 버튼 */
+.naver-btn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    margin-right: 30px;
+    float: left;
+    position: relative;
+}
+
+.naver-btn-bg {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: rgb(3, 199, 90);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.user-naver-icon {
+    font-size: 25px;
+    margin-right: 12px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+/* NaverLogin.js 파일 css */
+#naverIdLogin {
+    display: none;
+    width: 50px;
+    height: 50px;
+    z-index: 10;
+}
+
+/* 카카오 버튼 로그인 */
+.kakao-btn {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    float: left;
+    position: relative;
+}
+
+.kakao-btn-bg {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background-color: #FEE500;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.user-kakao-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 37px;
+    color: #3B1E1E;
+}
+
+/* 클리어 */
+.login-header::after,
+.dev-login-header::after,
+.login-body::after,
+.login-content::after,
+.login-btn-box::after,
+.select-login-content::after,
+.select-login-box::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+/* ------------------------------------------------------------------------------------ */
+/* 선택 회원가입 */
+.select-register-container {
+    height: 93.6vh;
+    overflow: hidden;
+    padding: 100px 400px;
+    position: relative;
+}
+
+.select-register-box {
+    width: 40%;
+    border: 3px solid black;
+    background-color: white;
+    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.select-register-bg {
+    width: 100%;
+    height: 93.6vh;
+    background: linear-gradient(40deg, rgb(255, 227, 227), rgb(194, 194, 194), rgb(248, 213, 255));
+    animation: huerotator 8s infinite alternate;
+    position: absolute;
+}
+
+.select-register-body,
+.select-user-register-body {
+    padding: 80px 150px;
+}
+
+.select-register-body .title,
+.select-user-register-body .title {
+    font-family: 'TheJamsil5Bold';
+    font-size: 3em;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.select-user-register-body .title p:last-child {
+    font-size: 24px;
+    margin-top: 15px;
+    color: gray;
+}
+
+.dev-register-btn,
+.user-register-btn {
+    width: 100%;
+    line-height: 30px;
+    text-align: center;
+    padding: 20px;
+    font-family: 'TheJamsil5Bold';
+    font-size: 20px;
+    background-color: black;
+    border: 3px solid black;
+    color: white;
+    cursor: pointer;
+    transition: all .1s ease;
+}
+
+.dev-register-btn {
+    background-color: #ffbb00;
+    border: 3px solid #ffbb00;
+    margin-bottom: 30px;
+}
+
+.dev-register-btn:hover {
+    background: linear-gradient(to right, #fff099, #ffface, #ffcacb);
+    color: black;
+}
+
+.user-register-btn:hover {
+    background: linear-gradient(to right, #fffde2, #faccff, #b9faff);
+    color: black;
+}
+
+.select-btn-p {
+    font-size: 30px;
+    margin: 10px;
+}
+
+/* 회원가입 소셜 */
+/* 네이버 */
+.register-naver-btn-box {
+    background-color: rgb(3, 199, 90);
+    height: 72px;
+    margin: 20px 0px;
+    text-align: center;
+    position: relative;
+}
+
+.select-naver-btn {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.select-naver-tag {
+    display: inline-block;
+    height: 72px;
+    line-height: 72px;
+    font-family: 'TheJamsil5Bold';
+    font-size: 20px;
+    color: white;
+}
+
+.select-naver-icon {
+    vertical-align: sub;
+    font-size: 25px;
+    margin-right: 12px;
+}
+
+/* 카카오 */
+.register-kakao-btn-box {
+    background-color: #FEE500;
+    height: 72px;
+    margin-bottom: 60px;
+    text-align: center;
+    position: relative;
+}
+
+.select-kakao-btn {
+    width: 100%;
+    height: 72px;
+    position: absolute;
+    top: 0;
+}
+
+.select-kakao-tag {
+    display: inline-block;
+    height: 72px;
+    line-height: 72px;
+    font-family: 'TheJamsil5Bold';
+    font-size: 20px;
+    color: #3B1E1E;
+}
+
+.select-kakao-icon {
+    vertical-align: middle;
+    font-size: 40px;
+    margin-right: 10px;
+    padding-bottom: 5px;
+    color: #3B1E1E;
+}
+
+/* 회원가입 */
+.register-container {
+    height: 100vh;
+    overflow: hidden;
+    padding: 80px 600px;
+    position: relative;
+}
+
+.register-bg {
+    width: 100%;
+    height: 93.6vh;
+    background: linear-gradient(40deg, rgb(255, 227, 227), rgb(194, 194, 194), rgb(248, 213, 255));
+    animation: huerotator 8s infinite alternate;
+    position: absolute;
+}
+
+@keyframes huerotator {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.dev-register-bg {
+    width: 100%;
+    height: 93.6vh;
+    background: linear-gradient(40deg, rgb(255, 255, 227), rgb(194, 194, 194), rgb(213, 216, 255));
+    animation: huerotator 8s infinite alternate;
+    position: absolute;
+}
+
+.register-box {
+    border: 3px solid black;
+    background-color: white;
+}
+
+/* form */
+.register-body {
+    padding: 40px 150px;
+}
+
+.register-body .title {
+    font-family: 'TheJamsil5Bold';
+    font-size: 2em;
+    padding: 10px 0px 20px 0px;
+}
+
+.register-body .title p:last-child {
+    font-size: 0.8em;
+    margin-top: 5px;
+    color: gray;
+}
+
+/* 인풋박스 */
+.input-register-id,
+.input-register,
+.input-pwdChecked,
+.input-email {
+    position: relative;
+    margin: 10px 0;
+    font-family: 'SUITE-Regular';
+    font-weight: bold;
+    height: 55px;
+}
+
+.input-email {
+    margin-bottom: 20px;
+}
+
+.input-register-id>input {
+    display: inline-block;
+    border: 3px solid black;
+    padding: 10px;
+    width: 80%;
+    height: 40px;
+    line-height: 34px;
+    margin-bottom: 15px;
+    font-family: 'SUITE-Regular';
+    font-weight: bold;
+    font-size: 1em;
+}
+
+#doublecheck-btn {
+    width: 20%;
+    height: 40px;
+    color: white;
+    background-color: black;
+    border: none;
+    font-family: 'SUITE-Regular';
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.input-register>input {
+    border: 3px solid black;
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    line-height: 34px;
+    margin-bottom: 15px;
+    font-family: 'SUITE-Regular';
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.input-pwdChecked>input,
+.input-email>input {
+    border: 3px solid black;
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    line-height: 34px;
+    margin-bottom: 5px;
+    font-family: 'SUITE-Regular';
+    font-weight: bold;
+    font-size: 1em;
+}
+
+input::placeholder {
+    color: gray;
+    font-family: 'SUITE-Regular';
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.input-register-id label,
+.input-register label,
+.input-pwdChecked label,
+.input-email label {
+    display: none;
+}
+
+/* :focus-within은 해당 요소 내부의 자식 요소 중 하나가 포커스되면 스타일을 적용 */
+.input-register:focus-within>label,
+.input-register>input:focus+label,
+.input-pwdChecked:focus-within>label,
+.input-pwdChecked>input:focus+label,
+.input-email:focus-within>label,
+.input-email>input:focus+label {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    font-size: 10px;
+    font-size: 0.8em;
+    padding: 0px 10px;
+    position: absolute;
+    left: 10px;
+    top: -8px;
+}
+
+/* 에러메세지 */
+.input-pwdChecked .message.error,
+.input-email .message.error {
+    font-family: 'SUITE-Regular';
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgb(255, 72, 72);
+}
+
+.input-pwdChecked .message.success,
+.input-email .message.success {
+    font-family: 'SUITE-Regular';
+    font-size: 0.8em;
+    font-weight: bold;
+    color: rgb(72, 121, 255);
+    margin-bottom: 10px;
+}
+
+/* 회원가입 버튼 */
+.registerCheck-btn {
+    width: 100%;
+    height: 40px;
+    border: 3px solid black;
+    background-color: black;
+    font-family: 'TheJamsil5Bold';
+    color: white;
+    font-size: 1em;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.registerCheck-btn:disabled {
+    background-color: lightgray;
+    color: black;
+    cursor: none;
+}
+
+.dev-registerCheck-btn {
+    width: 100%;
+    height: 40px;
+    border: 3px solid #ffbb00;
+    background-color: #ffbb00;
+    font-family: 'TheJamsil5Bold';
+    color: white;
+    font-size: 1em;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.dev-registerCheck-btn:disabled {
+    border: 3px solid #ffbb00;
+    background-color: #fff2cf;
+    color: #ffbb00;
+    cursor: none;
+}
+
+/* 비밀번호표시 */
+/* 요소를 숨기는 class.*/
+#showPwd-check {
+    position: absolute;
+    opacity: 0;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/*체크를 안 했을 때*/
+.checkbox-item>label::before {
+    display: inline-block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    background-image: url("../img/bx-show-alt.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/*체크했을 때*/
+.checkbox-item>input:checked+label::before {
+    background-image: url("../img/bxs-hide.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.checked-box {
+    position: relative;
+    margin-bottom: 30px;
+    height: 60px;
+}
+
+.checkbox-item {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    margin-bottom: 20px;
+}
+
+.checkbox-item label {
+    height: 20px;
+}
+
+.checkbox-item span {
+    font-family: 'SUITE-Regular';
+    font-size: 0.8em;
+    font-weight: bold;
+    vertical-align: super;
+}
